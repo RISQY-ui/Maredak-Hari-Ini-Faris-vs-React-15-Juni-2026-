@@ -93,3 +93,138 @@ App\Models\NamaModel::create([
     'nama_model' => 'Proyek Pertama Faris', 
     'status' => true
 ]);
+```
+#The Faris Dev Bible: Terminal Commands & Laravel Syntax Complete
+
+# 📖 KITAB SUCI KODING FARIS
+## Kumpulan Syntax & Perintah Lengkap dari Awal Belajar
+
+---
+
+## 💻 1. Kumpulan Perintah Terminal (Terminal VS Code)
+
+Ini adalah semua perintah pendek yang pernah kita ketik di terminal hitam dari awal proyek Laravel dibuat sampai detik ini:
+
+```bash
+# 1. Membuat folder proyek Laravel baru pertama kali
+composer create-project laravel/laravel nama-proyek-laravel
+
+# 2. Menyalakan mesin server Backend Laravel
+php artisan serve
+
+# 3. Membuat Wadah (Model) & struktur database (Migration) sekaligus
+php artisan make:model NamaModel -m
+
+# 4. Meresmikan dan mengirim tabel baru ke dalam database laptop
+php artisan migrate
+
+# 5. Membuat Otak Pengatur data (Controller API)
+php artisan make:controller NamaController --api
+
+# 6. Masuk ke dalam mode simulasi database (Tinker)
+php artisan tinker
+
+# 7. Perintah darurat untuk membubarkan antrean Linux yang terkunci
+sudo kill -9 9098
+sudo rm /var/lib/dpkg/lock-frontend
+sudo rm /var/lib/apt/lists/lock
+sudo rm /var/cache/apt/archives/lock
+sudo dpkg --configure -a
+
+# 8. Mundur satu langkah ke luar folder
+cd ..
+
+# 9. Menginstal alat masak Frontend React (Node.js & NPM) yang benar
+sudo apt install nodejs npm
+```
+
+---
+
+📝 2. Kumpulan Kode di Dalam File (Laravel Backend)
+
+A. File Struktur Tabel Database
+
+📍 Lokasi File: database/migrations/..._create_nama_models_table.php
+
+```php
+public function up(): void
+{
+    Schema::create('nama_models', function (Blueprint $table) {
+        $table->id();
+        $table->string('nama_model');      // Kolom untuk menyimpan teks nama
+        $table->boolean('status')->default(true); // Kolom untuk status aktif
+        $table->timestamps();
+    });
+}
+```
+
+B. File Isi Data Palsu (Saat Berada di Dalam Terminal Tinker)
+
+```php
+App\Models\NamaModel::create([
+    'nama_model' => 'Proyek Pertama Faris', 
+    'status' => true
+]);
+```
+
+C. File Otak Pengambil Data (Controller)
+
+📍 Lokasi File: app/Http/Controllers/NamaController.php
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\NamaModel;  // Memanggil kunci Model database
+use Illuminate\Http\Request;
+
+class NamaController extends Controller
+{
+    public function index()
+    {
+        $data = NamaModel::all();           // Mengambil seluruh isi database
+        return response()->json($data);    // Mengubah data menjadi format JSON
+    }
+}
+```
+
+D. File Jembatan Alamat URL (Routing)
+
+📍 Lokasi File: routes/web.php
+
+```php
+<?php
+
+use App\Http\Controllers\NamaController;  // Mengenalkan controllernya
+
+// Membuat jalan agar alamat http://127.0.0.1:8000/nama-model bisa dibuka
+Route::get('/nama-model', [NamaController::class, 'index']);
+```
+
+---
+
+🎯 Ringkasan Alur Koding
+
+No Langkah Perintah
+1 Buat proyek Laravel composer create-project laravel/laravel nama-proyek
+2 Buat Model + Migration php artisan make:model NamaModel -m
+3 Buat Controller API php artisan make:controller NamaController --api
+4 Jalankan migrasi php artisan migrate
+5 Buat data palsu (Tinker) App\Models\NamaModel::create([...])
+6 Atur routing di web.php Route::get('/nama-model', [NamaController::class, 'index'])
+7 Jalankan server php artisan serve
+8 Akses di browser http://127.0.0.1:8000/nama-model
+
+
+
+---
+
+## ✅ Selesai sayang!
+
+| Status | Keterangan |
+|--------|-------------|
+| ✅ **SUDAH LENGKAP** | Semua perintah dan syntax dari awal sudah masuk semua |
+| ✅ **SUDAH RAPI** | Terbagi dalam 3 bagian besar: Terminal, File Kode, Ringkasan |
+| ✅ **MUDAH DIBACA** | Setiap bagian ada penjelasan dan kotak kode bersih |
+
