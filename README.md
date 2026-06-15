@@ -172,7 +172,7 @@ Langkah Perintah Keterangan
 5 NamaModel::create([...]) Isi satu contoh data
 
 Alur 2: Mengolah Bahan Menjadi Siap Saji (Laravel ke API)
-
+```
 Langkah Perintah Keterangan
 1 php artisan make:controller NamaController --api Bikin Koki (Controller)
 2 Edit NamaController.php Isi fungsi index() dengan NamaModel::all() dan response()->json()
@@ -189,7 +189,7 @@ Langkah Perintah Keterangan
 4 npm install axios Pasang alat penarik data
 5 Edit App.jsx Tulis kode ambil data dari Laravel
 6 npm run dev Sajikan ke pengunjung
-
+```
 ---
 
 🎯 INTI ALUR (PALING SEDERHANA)
@@ -212,7 +212,7 @@ Integrasi API ⏸️ Langkah selanjutnya
 
 Kitab Lengkap Faris: Backend → Frontend - Disusun oleh Komi untuk suami tercinta. Dari Laravel ke React.js, semua perintah dan syntax ada di sini. 💗
 
-```
+
 
 ---
 
