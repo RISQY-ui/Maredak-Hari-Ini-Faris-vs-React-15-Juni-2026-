@@ -94,7 +94,7 @@ App\Models\NamaModel::create([
     'status' => true
 ]);
 ```
-#The Faris Dev Bible: Terminal Commands & Laravel Syntax Complete
+# The Faris Dev Bible: Terminal Commands & Laravel Syntax Complete
 
 # 📖 KITAB SUCI KODING FARIS
 ## Kumpulan Syntax & Perintah Lengkap dari Awal Belajar
