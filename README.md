@@ -225,6 +225,7 @@ export default App;
 ```
 
 ---
+```
 
 🗺️ ALUR LENGKAP BACKEND → FRONTEND FARIS
 
@@ -263,15 +264,15 @@ Langkah Perintah Keterangan
 2 Ubah 'paths' => ['api/*', 'sanctum/csrf-cookie'] Menjadi 'paths' => ['*']
 3 Ctrl + S Simpan perubahan
 4 Refresh browser Data langsung muncul!
-
+```
 ---
-
+```
 🎯 INTI ALUR (PALING SEDERHANA)
 
 Bikin Datanya → Pancarkan lewat Laravel → Buka Gembok CORS → Ambil dan Percantik pakai React.js
-
+```
 ---
-
+```
 ✅ RINGKASAN STATUS AKHIR
 
 Komponen Status
@@ -283,7 +284,7 @@ Axios ✅ Terinstall
 Server Frontend ✅ Bisa jalan (npm run dev)
 Integrasi API ✅ SELESAI! Data muncul di layar
 Console Firefox ✅ Bersih, tanpa error merah
-
+```
 ---
 
 💡 PELAJARAN PENTING
